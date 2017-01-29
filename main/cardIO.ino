@@ -72,8 +72,7 @@ void initCard() {
     }
     index.close();
   }
-  String flight = "f";
-  logFileName = flight + count + ".log";
+  logFileName = "f" + String(count) + ".log";
   Serial.println("\nLatest logfile: " + logFileName);
 }
 
