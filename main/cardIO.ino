@@ -37,7 +37,7 @@ void initCard() {
   }
   Serial.println("Initialisation done.");
 
-  // test file write
+  /*// test file write
   File test = SD.open("test.log", FILE_WRITE);
   if (test) { // if the file opens
     Serial.println("Writing to test.log...");
@@ -77,10 +77,11 @@ void initCard() {
 }
 
 // Writes strings to latest log file (f#.log). Parameter is a string.
+// Format of log (in CSV): milliseconds,(Data here seperated by commas)
 void writeLog(String text) {
   File LOG = SD.open(logFileName, FILE_WRITE);
   if (LOG) {
-    LOG.println(text);
+    LOG.println(String(millis()) + "," + text);
     LOG.close();
   } else {
     Serial.println("ERROR: Writing to log failed!");
