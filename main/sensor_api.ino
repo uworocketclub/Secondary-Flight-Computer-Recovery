@@ -81,3 +81,19 @@ boolean altitude_temperature_sensor(float &altitude, float &temperature)
 
   return false;
 }
+
+
+// Function returns float value for altitude based on sea level pressure, temperature and current pressure. 
+float get_alt() {
+   bmp.getEvent(&bmp_event);
+  if (bmp_event.pressure)
+  {
+    /* Get ambient temperature in C */
+    bmp.getTemperature(&temperature);
+    /* Convert atmospheric pressure, SLP and temp to altitude    */
+    altitude = bmp.pressureToAltitude(seaLevelPressure,
+                                      bmp_event.pressure,
+                                      temperature); 
+    return altitude;
+  }
+}
