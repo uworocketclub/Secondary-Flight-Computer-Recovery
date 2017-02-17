@@ -2,8 +2,8 @@
    Secondary Flight Computer
    UWO Rocket Club
    Contributors:
-   
 */
+
 float currentAGLafter; //current above ground level altitude
 float currentAGLbefore = 0; //last altitude reading (above ground level)
 float temperature;
@@ -21,13 +21,13 @@ void setup() {
 
   // initialise SD card for logging
   initCard();
-
+  
   launchAlt = getGroundAlt();
 }
 
 void loop() {
   writeLog("Altitude: test");
-
+  
   currentAGLafter = getAGLAlt();
   
     if(currentAGLafter >= 6) { //signifies that the rocket has launched (6 meters)
@@ -49,11 +49,10 @@ void loop() {
         }
     }
     
-
-  
   delay(1000);
 
 }
+
 
 //takes 100 samples and selects the lowest as ground altitude
 float getGroundAlt() {
@@ -71,4 +70,3 @@ float getGroundAlt() {
 float getAGLAlt() {
   return  get_alt() - groundAltitude;
 }
-

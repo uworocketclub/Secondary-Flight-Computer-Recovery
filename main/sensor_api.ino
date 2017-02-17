@@ -82,7 +82,6 @@ boolean altitude_temperature_sensor(float &altitude, float &temperature)
   return false;
 }
 
-
 float get_alt() {
    bmp.getEvent(&bmp_event);
   if (bmp_event.pressure)
@@ -96,7 +95,3 @@ float get_alt() {
     return altitude;
   }
 }
-
-
-
-
