@@ -77,5 +77,5 @@ float getGroundAlt() {
 
 // Get the altitude above ground level
 float getAGLAlt() {
-  return  get_alt() - groundAltitude;
+  return  get_alt() - launchAlt;
 }

@@ -1,4 +1,4 @@
-
+/*
 void setup() {
   Serial.begin(115200);
 
@@ -27,7 +27,7 @@ void loop() {
     Serial.print(F("Alt: "));
     Serial.print(altitude); 
     Serial.print(F(" m; "));
-    /* Display the temperature */
+    // Display the temperature
     Serial.print(F("Temp: "));
     Serial.print(temperature);
     Serial.print(F(" C"));
@@ -35,4 +35,4 @@ void loop() {
 
   Serial.println(F(""));
   delay(1000);
-}
+}*/
