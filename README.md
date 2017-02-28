@@ -12,6 +12,9 @@ To compile the program, you must have the required libraries installed:
 * [SD Library for Arduino](https://github.com/arduino-libraries/SD)
 
 To install these libraries, download each library as a ZIP and move the root folder of the ZIP into the `libraries` directory located in the default sketchbook directory. If the `libraroes` directory does not exist, create it. The location varies depending on the OS:
+
 Linux: `~/Arduino/libraries`
+
 Mac OS: `~/Documents/Arduino/libraries`
+
 Windows: `%USERPROFILE%\Documents\Arduino\libraries`
